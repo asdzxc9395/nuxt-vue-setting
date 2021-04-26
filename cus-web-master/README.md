@@ -34,28 +34,37 @@ $ npm in stall @nuxtjs/auth (~ v4)
 ## set nuxt.config.js
 
 1. axios전송과 auth인증을 위한 modules 세팅
+
+``` bash
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/auth'
   ],
+```
 
 2. set middleware 
 
+``` bash
   router: {
   middleware: ['auth']
 }
+```
 
 - 특정 요소에서 auth을 false 할 경우
 
+``` bash
   export default {
     auth: false
   }
+```
 
 - guest로 선언시, loggedIn이 true로 활성화되며, default페이지로 redirect된다. 
 
+``` bash
   export default {
   auth: 'guest'
 }
+```
 
 3. set Scheme 
 
@@ -64,7 +73,7 @@ $ npm in stall @nuxtjs/auth (~ v4)
 - strategy이름은 key, value는 설정값.
 
 
-
+``` bash
 auth: {
   strategies: {
     local1: { scheme: 'local', /* ... */ },
@@ -72,7 +81,7 @@ auth: {
     custom: { scheme: '~/schemes/customStrategy', /* ... */ },
   }
 }
-
+```
 
 4. example 
 
