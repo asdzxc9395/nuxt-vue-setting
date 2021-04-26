@@ -1,10 +1,12 @@
 <template>
-    <div v-else id="login_conatiner">
-      <!-- <img src="~static/images/tke_logo_claim_cmyk_standard_white.png" alt="thyssenkrupp logo" width="400"> -->
-      <p class="program_title" v-text="$t('project')"></p>
+    <div id="login_conatiner">
+      <img src="/images/mari.png" alt="Vuetify.js" class="mb-5" width="200px"/>
+      <!-- <p class="program_title" v-text="$t('project')"></p> -->
+      <p class="program_title" v-text="'Mari 팬클럽'"></p>
       <form id="login_form" onsubmit="return false;">
         <div>
-          <label class="legend" v-text="$t('login.userId')"></label>
+          <label class="legend" v-text="'Id'"></label>
+          <!-- <label class="legend" v-text="$t('login.userId')"></label> -->
           <input
             ref="userId"
             v-model="loginForm.userId"
@@ -12,7 +14,8 @@
             autocomplete="off"
           ></div>
         <div>
-          <label class="legend" v-text="$t('login.userPw')"></label>
+          <label class="legend" v-text="'Password'"></label>
+          <!-- <label class="legend" v-text="$t('login.userPw')"></label> -->
           <input
             v-model="loginForm.userPw"
             type="password"
@@ -22,7 +25,8 @@
           v-on:click="handleLogin"
           class="btn_login zoom"
         >
-          {{ $t('login.btnLogin') }}
+        Login
+          <!-- {{ $t('login.btnLogin') }} -->
         </button>
       </form>
 
@@ -96,7 +100,7 @@
   }
 </script>
 
-
+<style src="static/css/test.css"></style>
 <style lang="stylus" scoped>
   .theme--light.v-btn:not(.v-btn--icon):not(.v-btn--flat)
     color #000

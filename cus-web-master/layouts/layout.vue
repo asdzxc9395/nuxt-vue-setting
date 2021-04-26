@@ -1,12 +1,26 @@
 <template>
-  <v-app dark  id="appRoot">
+  <v-app dark  id="appRoot" class="app">
     <v-navigation-drawer
       :mini-variant.sync="miniVariant"
       :clipped="clipped"
+      id="appDrawer"
+      class="app--drawer"
       v-model="drawer"
+      width="260"
       fixed
       app
     >
+    <v-toolbar
+          color="secondary logo-toolbar"
+          dark
+          @click="$router.push('/')"
+        >
+          <img src="/images/mari.png" alt="mari" width="20%">
+          <img src="/images/mari.png" alt="mari" width="20%">
+          <img src="/images/mari.png" alt="mari" width="20%">
+          <img src="/images/mari.png" alt="mari" width="20%">
+          <img src="/images/mari.png" alt="mari" width="20%">
+        </v-toolbar>
       <v-list>
         <v-list-tile
           router
@@ -24,60 +38,25 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar fixed app :clipped-left="clipped">
+    <v-toolbar fixed app :clipped-left="false">
       <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>web</v-icon>
-      </v-btn>
+      
+      
+      
+      <v-toolbar-title v-text="'Mari Fan page'"></v-toolbar-title>
       <v-btn
         class="pr-5 pl-5"
         icon
         @click="handlerLogout()"
       >logout
       </v-btn>
-      <v-btn
-        icon
-        @click="getuser()"
-      >getuser
-      </v-btn>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>menu</v-icon>
-      </v-btn>
     </v-toolbar>
     <v-content>
       <v-container>
         <nuxt />
       </v-container>
     </v-content>
-    <v-navigation-drawer
-      temporary
-      :right="right"
-      v-model="rightDrawer"
-      fixed
-    >
-      <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
-            <v-icon light>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
@@ -120,3 +99,30 @@
   }
   }
 </script>
+
+<style lang="stylus" scoped>
+  #appDrawer
+    overflow hidden
+
+    .drawer-menu--scroll
+      height calc(100vh - 48px)
+      overflow auto
+
+  .logo-toolbar .v-toolbar__content
+    padding 0 !important
+
+  .setting-fab
+    top 50% !important
+    right 0
+    border-radius 0
+
+  .page-wrapper
+    min-height calc(100vh - 64px - 50px - 81px)
+    margin-bottom 50px
+
+  .app--footer
+    position absolute
+    bottom 0
+    width 100%
+
+</style>

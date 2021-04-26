@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+/* 공통 */
+
+html,
+body:not(.bg) {
+  margin: 0;
+  padding: 0;
+  /*overflow: hidden;*/
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body:not(.bg) {
+  color: #FFFFFF;
+  padding: 40px 60px;
+  font-size: 18px;
+  letter-spacing: -1px;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.bg1 {
+  background: #ed7106;
+  background: linear-gradient(90deg, rgba(143,22,237,1) 0%, #ed7106 100%);
+}
+.bg2 {
+  background: #ed7106;
+  background: linear-gradient(90deg, rgba(143,22,237,1) 0%, rgba(237,113,6,1) 100%);
+}
+.bg3 {
+  background: #ed7106;
+  background: linear-gradient(90deg, rgba(143,22,237,1) 0%, rgba(237,113,6,1) 100%);
+}
+
+/* .bg1 {
+  background: #8f16ed url("../images/test_bg.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.bg2 {
+  background: #8f16ed url("../images/test_bg.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.bg3 {
+  background: #8f16ed url("../images/test_bg.jpg") no-repeat;
+  background-size: 100%;
+} */
+
+.bg1,
+.bg2,
+.bg3 {
+  background-size: cover;
+}
+
+p {
+  margin: 0px;
+}
+
+
+
+#login_conatiner {
+  height: 560px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -280px;
+  margin-left: -200px;
+  text-align: center;
+}
+
+.program_title {
+  font-size: 36px;
+  margin-top: 10px;
+  margin-bottom: 70px;
+}
+
+#login_form {
+  width: 360px;
+  margin: 10px auto;
+}
+
+#login_form input {
+  width: 260px;
+  padding: 5px;
+  float: right;
+  color: #FFF;
+  font-size: 18px;
+  margin-top: -5px;
+  background: none;
+  border: 0px;
+  outline: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#login_form div {
+  border-bottom: 1px solid #FFF;
+  text-align: left;
+  margin: 36px 0px;
+  padding: 4px 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 모바일 웹  */
+
+#login_conatiner_mobile {
+  height: 560px;
+  width: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  /* margin-top: -280px; */
+  /* margin-left: -200px; */
+  text-align: center;
+}
+
+.program_title_mobile {
+  font-size: 36px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+#login_form_mobile {
+  width: 260px;
+  margin: 10px auto;
+}
+
+#login_form_mobile input {
+  width: 160px;
+  padding: 5px;
+  float: right;
+  color: #FFF;
+  font-size: 18px;
+  margin-top: -5px;
+  background: none;
+  border: 0px;
+  outline: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#login_form_mobile div {
+  border-bottom: 1px solid #FFF;
+  text-align: left;
+  margin: 36px 0px;
+  padding: 4px 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.btn_login {
+  outline: 0;
+  width: 100%;
+  height: 48px;
+  border-radius: 3px;
+  font-size: 18px;
+  color: black;
+  background-color: #FFF;
+  /* border: 2px solid #FFF; */
+  -webkit-transition: background-color 0.4s, -webkit-transform 0.4s;
+  transition: background-color 0.4s, transform 0.4s;
+}
+
+.btn_login:hover {
+  background-color: #ac6edd8c;
+  color: #fff;
+}
+
+
+.btn_click {
+  outline: 0;
+  width: 200px;
+  height: 35px;
+  margin-top: 15px;
+  border-radius: 6px;
+  color: #944cf6;
+  background-color: #fff;
+  /* border: 1px solid #424242; */
+  -webkit-transition: background-color 0.4s, -webkit-transform 0.4s;
+  transition: background-color 0.4s, transform 0.4s;
+}
+
+.btn_click:hover {
+  background-color: #c0a0d8;
+}
