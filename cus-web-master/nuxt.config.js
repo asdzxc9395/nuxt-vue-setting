@@ -48,7 +48,7 @@ module.exports = {
   ** Axios config
   */
   axios: {
-    // baseURL: 'https://srm.tkek.co.kr:21110/srm',
+    baseURL: 'https://srm.tkek.co.kr:21110/srm',
     timeout: 50000,
   },
 
