@@ -67,8 +67,8 @@
     mounted() {
       this.$refs.userId.focus();
 
-      // this.$store.dispatch('INIT').then(() => {
-      // })
+      this.$store.dispatch('INIT').then(() => {
+      })
 
       this.$nuxt.$on('on-error', (props) => {
         errorHandlers(props)
@@ -84,6 +84,7 @@
 
         this.$root.$loading.start()
         try {
+          console.log(this.loginForm)
           await this.$store.dispatch('LOGIN', this.loginForm)
           this.$root.$loading.finish()
         } catch (error) {

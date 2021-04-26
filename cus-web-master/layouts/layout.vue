@@ -39,10 +39,15 @@
         <v-icon>web</v-icon>
       </v-btn>
       <v-btn
+        class="pr-5 pl-5"
         icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>remove</v-icon>
+        @click="handlerLogout()"
+      >logout
+      </v-btn>
+      <v-btn
+        icon
+        @click="getuser()"
+      >getuser
       </v-btn>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
@@ -99,6 +104,19 @@
         rightDrawer: false,
         title: 'Vuetify.js'
       }
+    },
+
+  methods: {
+    handlerLogout() {
+      this.$store.dispatch('LOGOUT').then(() => {
+          this.$auth.logout()
+          // window.location.href = '/login'
+          this.$router.push('/login')
+        })
+    },
+    getuser() {
+      console.log(this.$store.state)
     }
+  }
   }
 </script>
