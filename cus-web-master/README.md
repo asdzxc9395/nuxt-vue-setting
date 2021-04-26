@@ -26,9 +26,9 @@ For detailed explanation on how things work, check out the [Nuxt.js](https://git
 # nuxt auth 관련 설정
 
 ``` bash
-$ npm in stall @nuxtjs/auth-next (v5 version)
+$ npm install @nuxtjs/auth-next (v5 version)
 
-$ npm in stall @nuxtjs/auth (~ v4)
+$ npm install @nuxtjs/auth (~ v4)
 ```
 
 ## set nuxt.config.js
