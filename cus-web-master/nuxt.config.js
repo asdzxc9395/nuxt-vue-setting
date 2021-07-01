@@ -17,7 +17,8 @@ module.exports = {
   },
   
   css: [
-    '~/assets/style/app.styl'
+    '~/assets/style/app.styl',
+    '~/static/css/test.css',
   ],
   /*
   ** Customize the progress bar color
@@ -41,6 +42,7 @@ module.exports = {
     '@nuxtjs/auth',
     '@nuxtjs/device',
     '@nuxtjs/svg-sprite',
+    '@nuxtjs/pwa',
     'nuxt-i18n',
   ],
 

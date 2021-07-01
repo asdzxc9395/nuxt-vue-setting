@@ -16,6 +16,7 @@
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/device": "^2.1.0",
     "@nuxtjs/moment": "^1.6.1",
+    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/svg-sprite": "^0.4.12",
     "canvas": "^2.6.1",
     "chart.js": "^2.9.3",

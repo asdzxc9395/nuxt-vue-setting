@@ -10,11 +10,18 @@ body:not(.bg) {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-body:not(.bg) {
+/* body:not(.bg) {
   color: #FFFFFF;
   padding: 40px 60px;
   font-size: 18px;
   letter-spacing: -1px;
+} */
+
+body:not(.bg) {
+  margin: 0;
+  padding: 0;
+  /*overflow: hidden;*/
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 body {
